@@ -7,6 +7,6 @@ export const ContactList = () => {
         return filterArr.filter(contact => contact.name.toLocaleLowerCase().includes(state.phone.filter.toLocaleLowerCase()))
     })
 
-    return <ul>{item.map(({ name, number, id }) => <PersonlistItem key={id} name={name} number={number} id={id} deleteContact={delateContact} />)}</ul> 
+    return <ul className = "list-inline">{item.map(({ name, number, id }) => <PersonlistItem key={id} name={name} number={number} id={id} deleteContact={delateContact} />)}</ul> 
 }
 

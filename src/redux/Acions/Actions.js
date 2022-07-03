@@ -5,7 +5,12 @@ axios.defaults.baseURL = "https://connections-api.herokuapp.com/";
 
 export const addItems = createAsyncThunk(
   'phone/item',
- async (obj) =>{
+  async (obj) => {
+    const ContactsArr = await giveItems();
+    if (ContactsArr.some(elem => elem.name === obj.name)) {
+      alert(`${obj.name} іs already taken`)
+       return {id:ContactsArr.data.id,name:ContactsArr.data.name,number:ContactsArr.data.number}
+    }
     const objfull = await axios.post("/contacts", obj)
     return {id:objfull.data.id,name:objfull.data.name,number:objfull.data.number}
   

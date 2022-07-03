@@ -6,6 +6,7 @@ import {store } from './redux/store';
 import { Provider } from "react-redux";
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -17,9 +18,9 @@ root.render(
   <React.StrictMode>
     
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
       
   </React.StrictMode>

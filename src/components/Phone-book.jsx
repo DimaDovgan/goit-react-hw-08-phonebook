@@ -12,7 +12,7 @@ export const PhoneBook = () => {
 
     },[dispatch])
 
-    return <div>
+    return <div className=" container-fluid   mr-4" >
         
         <h1>Phonebook</h1>
         <FormContacts />

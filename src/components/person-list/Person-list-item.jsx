@@ -7,7 +7,7 @@ export const PersonlistItem = ({ name, number, id, deleteContact }) => {
         console.log()
         dispatch(deleteContact(id))
     }
-    return <li >{name} : {number} <Button variant="outline-danger" onClick={deleteContactValue}>Delete</Button></li>
+    return <li className="mt-3" >{name} : {number} <Button variant="outline-danger" onClick={deleteContactValue}>Delete</Button></li>
 }
 
 PersonlistItem.propTypes = {
